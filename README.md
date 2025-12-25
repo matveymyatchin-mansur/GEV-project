@@ -46,6 +46,7 @@ The work combines **CFD simulations**, **reduced-order aerodynamic modeling**, a
 ---
 
 ## Tools & Technologies
+- **CAD:** SALOME
 - **CFD:** OpenFOAM  
 - **Numerical Analysis:** Python (NumPy, SciPy, pandas, Matplotlib)  
 - **Reduced-Order Aerodynamics:** XFOIL  
@@ -74,4 +75,4 @@ Results and conclusions are expected to evolve as modeling fidelity increases.
 
 ## Author
 Matvey Myatchin
-Independent Engineering Project  
+Independent Engineering Project
