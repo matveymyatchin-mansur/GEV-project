@@ -42,3 +42,36 @@ The work combines **CFD simulations**, **reduced-order aerodynamic modeling**, a
   - Variable incidence surfaces
   - Control surface authority mapping
   - Stability-oriented geometric design choices
+
+---
+
+## Tools & Technologies
+- **CFD:** OpenFOAM  
+- **Numerical Analysis:** Python (NumPy, SciPy, pandas, Matplotlib)  
+- **Reduced-Order Aerodynamics:** XFOIL  
+- **Documentation:** LaTeX  
+- **Version Control:** Git / GitHub  
+
+---
+
+## Project Status
+**Status:** Ongoing  
+
+Current focus:
+- Baseline airfoil simulations outside ground effect  
+- Ground-effect CFD case setup and validation  
+- Initial reduced-order vehicle modeling  
+
+Future work includes extended stability analysis and evaluation of transition control strategies.
+
+---
+
+## Notes
+This repository is structured to emphasize **clarity, reproducibility, and engineering justification**.  
+Results and conclusions are expected to evolve as modeling fidelity increases.
+
+---
+
+## Author
+Matvey Myathcin
+Independent Engineering Project  
