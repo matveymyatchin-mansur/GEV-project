@@ -1,10 +1,10 @@
 # Computational Ground-Effect Vehicle project (Project outline)
 
 ## Phase 0 - project setup (COMPLETED)
-[x] • Set up Git/GitHub repository with clear folder structure.  
-[x] • Configure VS Code for Python, LaTeX, and Git workflows.  
-[x] • Establish logging system (Markdown notes, notebooks, or CSV logs).  
-[x] • Create initial README and LaTeX report skeleton.  
+[X] • Set up Git/GitHub repository with clear folder structure.  
+[X] • Configure VS Code for Python, LaTeX, and Git workflows.  
+[X] • Establish logging system (Markdown notes, notebooks, or CSV logs).  
+[X] • Create initial README and LaTeX report skeleton.  
 
 ## Phase 1 - Airfoil GE analysis
 [] • Select representative airfoils (e.g., NACA, Horton-type, DHMTU-inspired).  
