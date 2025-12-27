@@ -7,7 +7,10 @@
 * [X] Create initial README and LaTeX report skeleton.  
 
 ## Phase 1 - Airfoil GE analysis
-* [] Select representative airfoils (e.g., NACA, Horton-type, DHMTU-inspired).  
+### [] Airfoil selection  
+- Description: Selecting appropriate airfoils for testing (eg: DHMTU, NACA, Horton)
+- Source: [airfoil_selection.tex](latex/sections/airfoil_selection.tex)
+- LaTeX label: 'sec:airfoil-selection'
 * [] Establish baseline aerodynamic performance outside ground effect.  
 * [] Perform parametric sweeps over angle of attack, Reynolds number, and height-to-chord ratio.  
 * [] Use reduced-order tools (e.g., XFOIL) for rapid comparison.  
