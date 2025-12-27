@@ -7,6 +7,8 @@
 * [X] Create initial README and LaTeX report skeleton.  
 
 ## Phase 1 - Airfoil GE analysis
+* [] Write an abstract section.  
+* [] Perform literature study into GEVs.  
 ### [] Airfoil selection  
 - Description: Selecting appropriate airfoils for testing (eg: DHMTU, NACA, Horton)
 - Source: [airfoil_selection.tex](latex/sections/airfoil_selection.tex)
