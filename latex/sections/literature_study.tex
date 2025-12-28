@@ -2,31 +2,24 @@
 
 \section{Literature study}
 
-Ground-effect vehicles have been seriously studied and developed since the early 50's. Their applications, although initially focussed on military transportation, have since expanded to include commercial cargo and personell transport. Even with this seemingly rich history of research, uncertainties remain regarding the aerodynamic behaviour of these vehicles in ground effect, especially when considering modern design features and materials. This literature study aims to review the existing body of knowledge on ground-effect vehicles, focusing on aerodynamic characteristics, stability, and design considerations.
+Ground-effect vehicles (GEVs) have been the subject of sustained aerodynamic research since the mid-twentieth century, initially motivated by military transport applications and later extended to civilian and commercial concepts. Despite the breadth of existing studies, uncertainties remain regarding the aerodynamic behaviour of lifting surfaces operating in close proximity to the ground, particularly with respect to stability, sensitivity to operating height, and the applicability of conventional airfoil design principles. This literature study reviews the current state of knowledge on ground-effect aerodynamics, with emphasis on lift and drag characteristics, pressure distribution effects, and design implications relevant to GEV operation.
 
 \subsection{Ground Effect Aerodynamics}
 
-Purpose: establish what ground effect does to aerodynamics.\\
-Include:
-\begin{itemize}
-    \item Lift enhancement mechanisms near ground
-    \item Pressure distribution changes
-    \item Induced drag reduction
-    \item Sensitivity to height-to-chord ratio (h/c)
-\end{itemize}
+When a lifting surface operates in close proximity to the ground, its aerodynamic characteristics differ significantly from those observed in free-flight conditions. Ground effect is primarily characterised by an increase in lift coefficient ($C_L$) and a reduction in induced drag ($C_{D,i}$), resulting in an improved lift-to-drag ratio compared to operation far from the ground. These effects arise from the interaction between the wing-induced flow field and the ground plane, which alters both the downwash distribution and the pressure field around the wing.\\
 
-\noindent Focus on:
+\noindent In free flight, wingtip vortices generate a downward-induced velocity component that reduces the effective angle of attack across the span. As the wing approaches the ground, the formation and strength of these vortices are suppressed, leading to a reduction in downwash and a corresponding increase in effective angle of attack. This mechanism contributes directly to the observed lift enhancement and induced drag reduction in ground effect.\\
 
-\begin{itemize}
-    \item Quantitative trends (e.g. lift coefficient vs h/c)
-    \item Differences from free-flight aerodynamics
-\end{itemize}
-This justifies why airfoil choice matters differently in ground effect.
+\noindent In addition to vortex-related effects, ground proximity modifies the pressure distribution on the lifting surface. The presence of the ground restricts the downward displacement of streamlines beneath the wing, resulting in elevated static pressure on the lower surface and reduced pressure recovery losses. This altered pressure field enhances lift generation while simultaneously influencing pitching moment characteristics, which can have important implications for longitudinal stability.\\
+
+\noindent The magnitude of ground-effect influences is commonly described using the height-to-chord ratio ($h/c$). Experimental and numerical studies indicate that significant aerodynamic changes occur for $h/c \leq 0.5$, with increasingly pronounced effects as the wing approaches the ground. In so-called extreme ground-effect (EGE) conditions, typically defined as $h/c \leq 0.1$, aerodynamic behaviour departs substantially from free-flight assumptions and becomes highly sensitive to small changes in height \cite{GEV_investigation_IJET}.\\
 
 \subsection{Airfoil Performance in Ground Effect}
 
-This is the core of your literature study.\\
-Include:
+Studies have been conducted into various aspects of airfoil design in order to harness the ground effect to it's fullest extent. Perhaps the most noteable airfoil family, is the DHMTU series, developed at the Department of Hydro-Mechanics of the Marine Technical University in St. Petersburg, Russia. This family, charactarised by it's 8-digit designation (DHMTU a-b-c-d-e-f-g-h), was specifically designed to maximise factors like the lift-to-drag coefficient ($L/D$) and controlability in ground effect flight.\\
+
+\noindent A few series of airfoils that have been frequiently considered in simulations against specialized profiles like the DHMTU series, are the NACA 4412 and Clarck Y airfoils. These airfoils, although not being specifically designed for GEVs, are widely used in general aviation and posess some of the characteristics that are desireable for ground effect flight, such as a relatively flat bottom surface. Besides these classic airfoils, another wing design has emerged: the compound wing design. Research suggests that deviding a wing in into a rectangular middle part with reverse taper wings at the side, may significantly improve the GEV's performance in EGE.\\
+
 \begin{itemize}
     \item Studies comparing airfoils in ground effect
     \item Findings on camber, thickness, and pressure recovery
@@ -34,13 +27,13 @@ Include:
     \item Sensitivity to angle of attack and height
 \end{itemize}
 
-\noindent This is where you:
+\noindent This is where I:
 
 \begin{itemize}
     \item Introduce NACA, Horton, GEV-optimized airfoils
     \item Explain why some profiles are hypothesized to perform better
 \end{itemize}
- This directly leads into your airfoil selection section.
+This directly leads into the airfoil selection section.
 
 \subsection{Stability Considerations for GEVs}
 
@@ -52,11 +45,11 @@ Include:
     \item Problems encountered during ground-effect exit
     \item Influence of airfoil pitching moment
 \end{itemize}
-This links your CFD work to mechanical feasibility, not just aerodynamics.
+This links my CFD work to mechanical feasibility, not just aerodynamics.
 
 \subsection{Design Features Influencing Ground Effect}
 
-This is where your old “design” section belongs—refined.\\
+This is where my old “design” section belongs—refined.\\
 Include only:
 \begin{itemize}
     \item Endplates / wingtip devices
@@ -76,7 +69,7 @@ Everything must tie back to aerodynamic modeling assumptions.
 
 \subsection{Research Gaps}
 
-This is where your project earns its justification.\\
+This is where my project earns its justification.\\
 Examples:
 \begin{itemize}
     \item Limited public data on GEV-specific airfoils
@@ -84,6 +77,6 @@ Examples:
     \item Scarcity of stability-focused analyses
     \item Lack of comparative studies across airfoil families
 \end{itemize}
-This section explicitly motivates your study.
+This section explicitly motivates the study.
 
 \newpage
