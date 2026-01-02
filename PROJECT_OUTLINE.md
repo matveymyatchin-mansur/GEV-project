@@ -8,7 +8,10 @@
 
 ## Phase 1 - Airfoil GE analysis
 * [X] Write an abstract section.  
-* [] Perform literature study on GEVs.  
+### [X] Perform literature study on GEVs.
+- Descritpion: Perfomr literature study on current state research concerning GEVs.
+- Source: [literature_study.tex](latex/sections/literature_study.tex)
+### [] Methodology
 ### [] Airfoil selection  
 - Description: Selecting appropriate airfoils for testing (eg: DHMTU, NACA, Horton)
 - Source: [airfoil_selection.tex](latex/sections/airfoil_selection.tex)
