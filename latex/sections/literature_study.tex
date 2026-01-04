@@ -1,5 +1,4 @@
 %!TEX root = ../main.tex
-
 \section{Literature study}
 
 Ground-effect vehicles (GEVs) have been the subject of sustained aerodynamic research since the mid-twentieth century, initially motivated by military transport applications and later extended to civilian and commercial concepts. Despite the breadth of existing studies, uncertainties remain regarding the aerodynamic behaviour of lifting surfaces operating in close proximity to the ground, particularly with respect to stability, sensitivity to operating height, and the applicability of conventional airfoil design principles. This literature study reviews the current state of knowledge on ground-effect aerodynamics, with emphasis on lift and drag characteristics, pressure distribution effects, and design implications relevant to GEV operation.\\
@@ -30,46 +29,77 @@ The aerodynamic behaviour of airfoils operating in ground effect is governed by 
 
 \subsection{Stability Considerations for GEVs}
 
-This is mechanical + system-level, and very strong academically.\\
-Include:
-\begin{itemize}
-    \item Static pitch stability in ground effect
-    \item Moment sensitivity to height changes
-    \item Problems encountered during ground-effect exit
-    \item Influence of airfoil pitching moment
-\end{itemize}
-This links my CFD work to mechanical feasibility, not just aerodynamics.
+The aerodynamic performance and safety of wing-in-ground-effect (WIG) vehicles are governed by a strong coupling between pitch attitude $ \alpha $ and flight height $ h $ above the surface. Unlike conventional aircraft, whose longitudinal stability is primarily determined by the relative position of the center of gravity and a nearly fixed aerodynamic center, GEVs operate in a regime where aerodynamic forces vary rapidly with height. As a result, small vertical disturbances can induce significant changes in lift and pitching moment, making longitudinal stability a central design challenge. This is also illustrated by Irodov's criteria, which can be represented as follows:
+
+\[X_{\alpha} - X_{H} > 0 \qquad(with\,H = h/c)\]
+\[X_{\alpha} = \frac{\partial C_m}{\partial \alpha}\Big/ \frac{\partial C_L}{\partial \alpha}\]
+\[X_{H} = \frac{\partial C_m}{\partial H}\Big/ \frac{\partial C_L}{\partial H}\]\\
+
+\noindent Where $X_{\alpha}$ and $X_{H}$ are the aerodynamic centers of the angle of attack, $\alpha$, and height ratio, $H$, respectively \cite{Longitudinal_stability_study}.\\
+
+\noindent A defining feature of GEV aerodynamics is the height-dependent migration of the center of pressure. As ground clearance decreases, the buildup of static pressure beneath the wing intensifies due to restricted flow and partial stagnation. This pressure increase is not uniform: the high-pressure region expands aft toward the trailing edge, causing the center of pressure to shift rearward. In extreme ground effect, this shift can move the center of pressure from the quarter-chord position typical of free flight toward approximately the half-chord location. The resulting change in pitching moment produces a pronounced nose-down tendency that must be counteracted to maintain trim \cite{ISU_thesis}.\\
+
+\noindent This height sensitivity introduces an inherent form of longitudinal instability. During steady ground-effect flight, restoring forces can be maintained within a narrow altitude band. However, during transitions out of ground effect — such as climb-out or “jump” maneuvers — the sudden loss of ram-pressure support causes the center of pressure to migrate forward rapidly. This abrupt shift generates a strong nose-up pitching moment, increasing the risk of stall or loss of control if not properly managed. Consequently, many WIG craft are stable only within a limited “altitude corridor” close to the surface \cite{IFAC_new-gen_control_systems}.\\
+
+\noindent The pitching-moment characteristics of the airfoil play a critical role in mitigating these stability challenges. Conventional airfoils typically exhibit increasingly negative pitching moments as ground clearance decreases, exacerbating trim requirements. In contrast, airfoils specifically designed for ground-effect operation often employ reflexed or S-shaped camber lines and relatively flat lower surfaces. These features reduce the sensitivity of the pitching moment to height variations by unloading the aft portion of the wing, thereby limiting center-of-pressure migration. By stabilizing the pitching-moment behavior, such airfoils reduce the dependence on oversized horizontal tailplanes, which were commonly required in early airplane-type WIG designs \cite{Conference_paper_DHMTU}\cite{DSTO}.
 
 \subsection{Design Features Influencing Ground Effect}
 
-This is where my old “design” section belongs—refined.\\
-Include only:
-\begin{itemize}
-    \item Endplates / wingtip devices
-    \item Aspect ratio effects in ground effect
-    \item Wing height relative to fuselage
-    \item Interaction between wing and ground plane
-\end{itemize}
+The aerodynamic efficiency of Wing-In-Ground (WIG) vehicles is strongly governed by the
+interaction between the lifting surfaces and the ground plane. Unlike conventional aircraft,
+where aerodynamic performance is largely independent of altitude once clear of the boundary
+layer, WIG craft operate within a constrained flow environment in which geometric design
+choices directly influence lift generation, drag reduction, and stability.\\
 
-\noindent Exclude:
+\noindent A fundamental distinction between WIG craft and conventional aircraft is the systematic use
+of low geometric aspect ratios (AR). While high aspect ratios are generally favored in free flight to reduce induced drag, WIG vehicles exploit the proximity of the ground to suppress
+flight to reduce induced drag, WIG vehicles exploit the proximity of the ground to suppress
+wingtip vortices, thereby artificially increasing the effective aspect ratio. As a result,
+low-AR wings operating in ground effect can achieve lift-to-drag ratios comparable to much
+larger wings in free air. In addition to aerodynamic benefits, low-AR configurations offer
+greater structural stiffness and reduce sensitivity to vertical gusts, mitigating potentially
+dangerous oscillatory motions near the surface \cite{IFAC_controlled_WIG_flight_concept}\cite{HINDAWI_unsteady_effects}.\\
 
-\begin{itemize}
-    \item Engine history
-    \item Propulsion types
-    \item General aircraft design rules
-\end{itemize}
-Everything must tie back to aerodynamic modeling assumptions.
+\noindent The effectiveness of ground effect is further enhanced through the use of wingtip devices such
+as endplates or sideplates, which act as sealing elements that limit the lateral leakage of
+high-pressure air from beneath the wing. Experimental and numerical studies consistently show
+that endplates are most effective on low-aspect-ratio wings and when the clearance between the
+endplate lower edge and the ground is minimized. A significant portion of the aerodynamic
+benefit arises from endplate surfaces extending below the wing's lower surface, reinforcing
+the pressure build-up beneath the wing. The use of endplates or fences on lifting surfaces—
+including main wings, composite wings, and horizontal stabilizers—has been reported to
+increase aerodynamic efficiency by up to 25\% compared to configurations without such devices \cite{ISU_thesis}\cite{Rozhdestvensky_WIG-book}\cite{SPRINGER_WIG-book}.\\
+
+\noindent Wing placement relative to the fuselage represents another critical design parameter. The
+literature overwhelmingly favors low-wing configurations, as positioning the wing closer to
+the surface allows the trailing edge to operate within the region of strongest ground effect,
+typically characterized by a clearance below approximately 25\% of the chord length. In
+integrated configurations such as Dynamic Air Cushion Wing-In-Ground (DACWIG) concepts, the
+fuselage, wing, and lateral buoyancy elements are blended to form a continuous cavity beneath
+the craft. This approach reduces structural stress concentrations, minimizes the weight
+penalty of non-lifting fuselage components, and improves the confinement of the air cushion,
+thereby enhancing overall aerodynamic efficiency \cite{Rozhdestvensky_WIG-book}\cite{SPRINGER_WIG-book}\cite{IFAC_controlled_WIG_flight_concept}.\\
+
+\noindent Collectively, these design features demonstrate that successful WIG vehicle performance
+depends not only on airfoil selection, but on a holistic integration of wing geometry, wingtip
+devices, and fuselage layout. The strong coupling between aerodynamic efficiency and geometric
+configuration underscores the importance of tailored design strategies that explicitly
+account for ground-effect-specific flow phenomena.
 
 \subsection{Research Gaps}
 
-This is where my project earns its justification.\\
-Examples:
-\begin{itemize}
-    \item Limited public data on GEV-specific airfoils
-    \item Inconsistent findings between CFD and experiments
-    \item Scarcity of stability-focused analyses
-    \item Lack of comparative studies across airfoil families
-\end{itemize}
-This section explicitly motivates the study.
+Despite the well-documented aerodynamic advantages of Wing-In-Ground (WIG) effect technology,
+several persistent research gaps continue to limit its transition from experimental concepts to reliable operational platforms. These gaps primarily stem from the limited availability of public performance data, inconsistencies between numerical predictions and experimental observations, and an incomplete understanding of longitudinal stability and whole-vehicle integration in ground-effect flight.\\
 
-\newpage
+\noindent A major impediment identified in the literature is the scarcity of detailed, publicly available
+data on airfoils specifically designed for sustained operation in close ground proximity. Much of the foundational research—particularly studies related to the DHMTU airfoil series developed in the former Soviet Union—remains classified or poorly documented in open academic sources \cite{ASME_CFD_simulation}. As a result, contemporary researchers frequently rely on conventional NACA sections or reverse-engineered profiles that were originally optimized for free-flight conditions. This reliance limits the ability to accurately capture the pressure distributions and pitching moment characteristics unique to ground effect. The literature therefore emphasizes the need for a comprehensive, openly accessible airfoil database tailored to ground-effect applications.\\
+
+\noindent Another recurring issue is the inconsistency between Computational Fluid Dynamics (CFD) results
+and experimental data, particularly in extreme ground-effect regimes. While numerical methods have advanced significantly, reduced-order approaches such as the Vortex Lattice Method (VLM) often overpredict lift due to their inability to adequately represent viscous effects and airfoil thickness at very low clearances. Experimental validation is further complicated by limitations in wind tunnel testing, where fixed-floor configurations allow the development of an artificial boundary layer that distorts the under-wing flow. Accurate modeling of ground effect requires the use of rolling-floor facilities or moving-boundary conditions, which remain relatively scarce \cite{ASME_CFD_simulation}.\\
+
+\noindent Longitudinal stability and control constitute some of the most critical unresolved challenges
+in WIG vehicle design \cite{Longitudinal_stability_study}. Although theoretical frameworks such as Irodov's stability criteria provide valuable insight, much of the existing research prioritizes cruise efficiency metrics,
+such as lift-to-drag ratio, over the strongly non-linear coupling between pitch angle and height that dominates near-surface flight. Furthermore, there is no clear consensus regarding optimal stabilized operating altitudes or the effectiveness of automated control systems for mitigating disturbances caused by waves, gusts, and rapid changes in ground clearance.\\
+
+\noindent Finally, the literature reveals a lack of comparative studies across different airfoil families
+and a limited emphasis on treating the WIG vehicle as an integrated system \cite{HINDAWI_Exprerimental_investigation}. Many investigations focus on isolated wing aerodynamics while neglecting hydrodynamic effects during take-off, aeroelastic deformation of lightweight structures, and the interaction between aerodynamic and hydrodynamic loads. Addressing these deficiencies will require a shift toward coupled, time-domain simulations that integrate aerodynamics, hydrodynamics, and structural dynamics to ensure stability and safety across the full operational envelope.

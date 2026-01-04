@@ -1,0 +1,57 @@
+%!TEX root = ../main.tex
+\section{Methodology}
+
+This study adopts an airfoil-level approach to investigate aerodynamic behavior in ground-effect conditions relevant to Wing-In-Ground (WIG) vehicles. The methodology is designed to isolate the influence of airfoil geometry on lift, drag, and pitching moment behavior as a function of height above ground, while remaining computationally tractable and physically interpretable.\\
+
+\noindent Rather than optimizing a complete vehicle configuration, the analysis focuses on identifying aerodynamic trends and stability-relevant characteristics that constrain mechanically stable trim and control feasibility in ground-effect-dominated flight regimes.
+
+\subsection{Airfoil selection}
+
+As concluded in multiple previous studies, airfoil design plays a critical role in determining the aerodynamic efficiency and longitudinal stability of ground-effect vehicles. Based on a review of the literature, five representative airfoil sections were selected for analysis in this study. The selected profiles include airfoils specifically designed for ground-effect operation as well as conventional benchmark sections commonly used for validation and comparison.
+
+\subsubsection*{\underline{DHMTU 12-35-3-10-2-80-12-2}}
+
+The DHMTU 12-35-3-10-2-80-12-2 (from now on referred to as DHMTU 12), belongs to the DHMTU series of airfoils designed in Russia for WIG applications. It is characterized by a flat undersurface and an S-shaped mean line, which are critical for maximizing the "ram effect" while maintaining longitudinal stability. In comparative studies, it has demonstrated superior lift performance (generating 1.4 to 2.1 times the lift of standard foils \cite{Conference_paper_DHMTU}) and greater consistency in pitching moment ($C_m$) behavior as height decreases, making it an excellent candidate for this study \cite{ASME_CFD_simulation}.
+
+\subsubsection*{\underline{DHMTU 8-40-2-10-3-60-20-15}}
+
+A second airfoil from the DHMTU series (hereafter DHMTU 8), extensively mentioned in literature and having been cited as having "maximum aerodynamic efficiency", compared to other airfoils like Clarke-Y and Glenn Martin 2 \cite{IJET_GEV_investigation}. Its inclusion in CFD research allows for the study of optimization at low angles of attack, where it reaches peak efficiency at approximately $6^{\circ}$. It serves as a benchmark for high-performing modern GEV-specific sections.
+
+\subsubsection*{\underline{NACA 4412}}
+
+This is perhaps the most frequently used airfoil in WIG literature for multi-objective shape optimization (MOGA) \cite{HINDAWI_shape_optimization}. Its nearly flat lower surface facilitates a strong ram-air cushion, making it a favorite for researchers investigating how to improve L/D ratios in ground effect. It is the standard against which new optimized geometries are measured.
+
+\subsubsection*{\underline{Clark-Y}}
+
+The Clark-Y is a historical standard for WIG craft, famously used in Alexander Lippisch's designs such as the X-113Am and X-114 \cite{ISU_thesis}. In academic research, it is frequently used to evaluate longitudinal stability based on Irodov's Criteria. Because its aerodynamic characteristics in and out of ground effect are so well-documented, it is essential for validating the "aerodynamic center of height" shifts in CFD solvers \cite{Longitudinal_stability_study}.\\
+
+\subsubsection*{\underline{NACA 6409}}
+
+This airfoil was used in the Japanese KAG-3 research craft and is often pitched against DHMTU sections in modern numerical simulations \cite{IJET_GEV_investigation}. It is particularly noted for its ability to generate lift as it approaches the ground without producing the dangerous downward suction force (venturi effect) seen in symmetric airfoils at very low altitudes ($h/c \leq 0.2$) \cite{ASME_CFD_simulation}.
+
+\subsection{Operating conditions}
+
+The aerodynamic performance of each airfoil will be evaluated across a range of flight conditions representative for WIG vehicles. The key parameters to be tested include: 
+\begin{itemize}
+    \item \textbf{Relative height above ground (h/c):} Simulations will be conducted over a range of $0.1 \leq \frac{h}{c} \leq 0.5$ at increments of 0.1 to capture all ranges of the ground effect.
+    \item \textbf{Angle of attack (AoA):} A range of angles from 0° to +15° in 1° increments has been chosen for this study. The upper number of 15° was chosen to capture and compare stall behaviour, as stall usually occurs around 13° to 15° in ground effect.
+    \item \textbf{Reynolds number (Re):} Two Reynolds numbers are evaluated to assess sensitivity to vehicle scale and cruise condition: $Re=1*10^6$ as a representative baseline consistent with prior studies, and $Re=3*10^6$ as a higher-Re condition representative of larger, faster craft.
+\end{itemize}
+
+\subsection{Aerodynamic modelling approach}
+
+A combination of reduced-order aerodynamic methods and Computational Fluid Dynamics (CFD) will be employed in this study. Reduced-order tools (in XFOIL) are used to perform rapid parametric sweeps, trend identification and intial screenings of airfoil behaviour. CFD simulations (in OpenFOAM) will capture viscous effects neglected by inviscid models, resolve pressure distributions and pitching moment behavior, as well as validate reduced-order predictions in selected cases. The ground will be modeled as a moving boundary to avoid artificial boundary-layer growth and ensure physically realistic representation of the ground-effect flow field.
+
+\subsection{Evaluation Metrics}
+
+The main evaluation metric will be the lift-to-drag ratio (L/D), which directly determines the aerodynamic efficiency of the airfoil. Additional factors to be considered include the lift coefficient ($C_L$), drag coefficient ($C_D$), and moment coefficient ($C_m$) as functions of height and angle of attack. The stability characteristics will be assessed based on the slope of the moment curve:
+
+\[C_{m\alpha} = \frac{dC_m}{d\alpha}\]
+
+to determine trim feasibility and control authority in ground effect.
+
+\subsection{Comparative analysis strategy}
+
+The results are compared across airfoil families, ground-clearance ratios, and angles of attack. Rather than identifying a single “optimal” airfoil, the study aims to determine which geometric features consistently lead to favorable aerodynamic performance and stable pitching moment behavior.\\
+
+\noindent Particular emphasis is placed on identifying airfoil characteristics that mitigate adverse pitching-moment shifts with decreasing height, as these are critical for longitudinal stability and control in WIG vehicles
