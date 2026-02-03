@@ -1,20 +1,18 @@
-# Computational Ground-Effect Vehicle Stability Analysis
+# Computational Ground-Effect Vehicle Stability Study
 
 ## Overview
-This repository contains an ongoing independent engineering project focused on the **computational analysis and mechanical stability assessment of a ground-effect vehicle (WIG) configuration** across operating regimes.
+A ground-effect vehicle (GEV) is an aircraft designed to operate in close proximity to the ground, capitalising on a phenomenon -- the so-called ground effect -- that results in a significant increase in lift and a  reduction in induced drag. Despite their potential efficiency advantages, GEVs present significant challenges in airfoil selection and trim behavior, particularly when transitioning between ground-effect and free-flight conditions.\\
 
-The project investigates how aerodynamic characteristics, trim conditions, and static stability evolve as a vehicle transitions from strong ground effect to non-ground-effect operation. Emphasis is placed on **mechanically driven design and control strategies** that enable stable and controllable behavior across this transition.
-
-The work combines **CFD simulations**, **reduced-order aerodynamic modeling**, and **system-level mechanical analysis**, with a focus on reproducibility, documentation, and engineering rigor.
+This study investigates the aerodynamic characteristics of selected airfoil profiles in ground effect, with the objective of identifying configurations suitable for mechanically stable GEV operation. Building upon preliminary airfoil investigations conducted during a prior academic project, **five** representative airfoils are selected and evaluated using a combination of reduced-order aerodynamic analysis and computational fluid dynamics (CFD) simulations. Parametric variations in angle of attack, Reynolds number, and height-to-chord ratio are considered to assess lift, drag, and pitching moment behavior.\\
 
 ---
 
 ## Project Objectives
-- Quantify airfoil performance in ground effect under varying modeling assumptions  
-- Compare conventional airfoils with ground-effect-optimized profiles  
-- Develop a system-level mechanical model of a WIG-type vehicle  
-- Analyze trim conditions and static stability across height-to-chord ratios  
-- Investigate mechanically realistic strategies for maintaining controllability outside ground effect  
+- Quantify airfoil performance in ground effect under varying modeling assumptions.  
+- Compare conventional airfoils with ground-effect-optimized profiles.  
+- Develop a system-level mechanical model of a GEV.  
+- Analyze trim conditions and static stability across height-to-chord ratios.  
+- Investigate mechanically realistic strategies for maintaining controllability outside ground effect.  
 
 ---
 
@@ -46,12 +44,12 @@ The work combines **CFD simulations**, **reduced-order aerodynamic modeling**, a
 ---
 
 ## Tools & Technologies
-- **CAD:** SALOME
+- **CAD:** Ansys (to be confirmed later)
 - **CFD:** OpenFOAM  
 - **Numerical Analysis:** Python (NumPy, SciPy, pandas, Matplotlib)  
-- **Reduced-Order Aerodynamics:** XFOIL  
+- **Reduced-Order Aerodynamics:** XFOIL/Ansys (to be determined later)  
 - **Documentation:** LaTeX  
-- **Version Control:** Git / GitHub  
+- **Version Control:** Github  
 
 ---
 
@@ -59,20 +57,20 @@ The work combines **CFD simulations**, **reduced-order aerodynamic modeling**, a
 **Status:** Ongoing  
 
 Current focus:
-- Baseline airfoil simulations outside ground effect  
-- Ground-effect CFD case setup and validation  
-- Initial reduced-order vehicle modeling  
-
-Future work includes extended stability analysis and evaluation of transition control strategies.
+- Refine literature study
+- Refine methodology
+- Start writing the "Simulation" section:
+    ->  Gather geometric data on selected airfoils
 
 ---
 
 ## Notes
-This repository is structured to emphasize **clarity, reproducibility, and engineering justification**.  
+  
 Results and conclusions are expected to evolve as modeling fidelity increases.
 
 ---
 
 ## Author
 Matvey Myatchin
+
 Independent Engineering Project
