@@ -1,0 +1,9 @@
+\section{Simulations}
+
+\subsection{Simulation setup}
+
+Before conducting any of the simulations, it is essential to gather the geometric data of each airfoil to establish base aerodynamic performance outside ground effect. It is here that the first problem occured. The amount of public data on the DHMTU airfoil family is extremely scarce. The only recource that could be found to generate geometric coordinates for this profile, was JavaFoil. It is for this reason that, for consistency's sake, that all the geometric data for the simulations was generated using JavaFoil.\\
+
+\noindent It is noteworthy to mention, that the geometric data in this study will not perfectly match the shapes in the referenced studies. This is due to internal constraints of JavaFoil, not being able to modify the position of the end of the flat section (the $6^{th}$ digit in the airfoil code). For both DHMTU airfoils, this will be fixed at 70\% of the chord length. In addition, it was concluded that the last digit of the DHMTU 8-40-2-10-3-60-20-15 is incorrect. The last digit is the nose radius parameter, however, JavaFoil's modify card returned an unrealistically large nose radius, not alligning with the images in the reference paper. For this reason, the number was set at 1.5, instead of 15, allign much closer with the reference images in the original study.\\
+
+After generating the geometric coordinates for all 5 airfoils, the airfoil shapes were created in FreeCAD and exported to ANSYS for meshing.

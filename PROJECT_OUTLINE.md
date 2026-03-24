@@ -11,7 +11,7 @@
 * [X] Perform literature study on GEVs.
 - Descritpion: Perfomr literature study on current state research concerning GEVs.
 - Source: [literature_study.tex](latex/sections/literature_study.tex)
-### [X] Methodology
+* [X] Methodology
 - Source: [methodology.tex](latex/sections/methodology.tex)
 ### [] Airfoil selection  
 - Description: Selecting appropriate airfoils for testing (eg: DHMTU, NACA, Horton)

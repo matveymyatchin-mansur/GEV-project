@@ -44,7 +44,7 @@ This study investigates the aerodynamic characteristics of selected airfoil prof
 ---
 
 ## Tools & Technologies
-- **CAD:** Ansys (to be confirmed later)
+- **CAD:** Potentially Ansys (to be determined later)
 - **CFD:** OpenFOAM  
 - **Numerical Analysis:** Python (NumPy, SciPy, pandas, Matplotlib)  
 - **Reduced-Order Aerodynamics:** XFOIL/Ansys (to be determined later)  
@@ -57,7 +57,7 @@ This study investigates the aerodynamic characteristics of selected airfoil prof
 **Status:** Ongoing  
 
 Current focus:
-- Refine literature study
+- Refine literature study (fix reference placements)
 - Refine methodology
 - Start writing the "Simulation" section:
     ->  Gather geometric data on selected airfoils
